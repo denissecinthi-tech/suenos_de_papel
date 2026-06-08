@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sueños de Papel | Contáctanos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <aside class="sidebar-izquierda">
+        <div class="sidebar-header">
+            <a class="sidebar-brand" href="index.html">
+                <i class="fas fa-feather-alt me-2"></i>Sueños de Papel
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <span class="sidebar-seccion-titulo">Navegación</span>
+            <a class="sidebar-link" href="index.html"><i class="bi bi-house-fill"></i> Inicio</a>
+            <a class="sidebar-link" href="sobre-nosotros.html"><i class="bi bi-info-circle-fill"></i> Nosotros</a>
+            <a class="sidebar-link active" href="contactanos.html"><i class="bi bi-envelope-fill"></i> Contacto</a>
+            <a class="sidebar-link" href="preguntas-frecuentes.html"><i class="bi bi-question-circle-fill"></i> Preguntas Frecuentes</a>
+        </nav>
+        <div class="sidebar-footer">
+            <p>© 2026 Sueños de Papel</p>
+        </div>
+    </aside>
+
+    <main class="contenido-principal">
+        <div class="container py-5">
+            
+            <header class="text-center mb-5 animar-entrada">
+                <h1 class="titulo-seccion d-inline-block px-3">Contáctanos</h1>
+                <p class="lead mt-3 text-white-50">Estamos aquí para ayudarte. Envíanos un mensaje o visítanos.</p>
+            </header>
+
+            <div class="row g-4">
+                <div class="col-lg-7 animar-entrada delay-1">
+                    <div class="contacto-card p-4 h-100 shadow">
+                        <h3 class="mb-4 text-rosa fw-bold"><i class="bi bi-chat-right-text-fill me-2"></i>Envíanos un Mensaje</h3>
+                        
+                        <div id="respuesta"></div>
+
+                        <form id="formulario" novalidate>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="correo" class="form-label fw-bold">Correo Electrónico</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
+                                    <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label fw-bold">Teléfono / Celular</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                                    <input type="tel" class="form-control" id="telefono" placeholder="Ej. 71234567" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="asunto" class="form-label fw-bold">Asunto</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-question-circle-fill"></i></span>
+                                    <select class="form-select" id="asunto" required>
+                                        <option value="" selected disabled>Seleccione un asunto...</option>
+                                        <option value="Consultas">Consultas Generales</option>
+                                        <option value="Pedidos">Pedidos Especiales</option>
+                                        <option value="Sugerencias">Sugerencias</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="mensaje" class="form-label fw-bold">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="button" class="btn btn-wsp px-4 py-2 me-md-2" onclick="enviarWhatsApp()">
+                                    <i class="bi bi-whatsapp me-2"></i>Enviar a WhatsApp
+                                </button>
+                                <button type="submit" class="btn btn-custom px-4 py-2">
+                                    <i class="bi bi-send-fill me-2"></i>Enviar Correo
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 d-flex flex-column justify-content-between animar-entrada delay-2">
+                    <div class="contacto-card p-4 shadow mb-4">
+                        <h3 class="mb-4 text-rosa fw-bold"><i class="bi bi-info-circle-fill me-2"></i>Información de Contacto</h3>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="bi bi-geo-alt-fill fs-3 me-3 text-rosa"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Nuestra Ubicación</h5>
+                                <p class="mb-0 text-white-50">Zona Calacoto, Calle 21, Centro Comercial "Plaza 21 Mall" Local 12</p>
+                                <p class="mb-0 text-white-50">La Paz, Bolivia</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-2">
+                            <i class="bi bi-clock-fill fs-3 me-3 text-rosa"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Horario de Atención</h5>
+                                <p class="mb-0 text-white-50">Lunes a Viernes: 08:30 - 18:30<br>Sábados: 09:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacto-card p-2 shadow flex-grow-1 overflow-hidden rounded" style="min-height: 380px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.261623869502!2d-68.0772274!3d-16.5414801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f213b306b99ad%3A0x60010eb30f5ec896!2sParroquia%20San%20Miguel%20Arc%C3%A1ngel!5e0!3m2!1ses!2sbo!4v1717812345678!5m2!1ses!2sbo" width="100%" height="100%" style="border:0; min-height: 380px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="main-footer mt-5">
+            <p class="mb-1 fw-bold">© 2026 Papelería - Sueños de Papel</p>
+            <small>Todos los derechos reservados</small>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="contactanos.js"></script>
+
+    <script>
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(entrada => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('visible');
+                    observador.unobserve(entrada.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.animar-entrada').forEach(elemento => {
+            observador.observe(elemento);
+        });
+    </script>
+</body>
+</html>
